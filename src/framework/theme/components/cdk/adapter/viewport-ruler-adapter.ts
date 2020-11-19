@@ -12,7 +12,7 @@ export class NbViewportRulerAdapter extends ViewportRuler {
   constructor(platform: NbPlatform, ngZone: NgZone,
               protected ruler: NbLayoutRulerService,
               protected scroll: NbLayoutScrollService) {
-    super(platform, ngZone);
+    super(platform, ngZone, document);
   }
 
   getViewportSize(): Readonly<{ width: number; height: number; }> {
